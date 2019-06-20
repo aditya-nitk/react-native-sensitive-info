@@ -2,7 +2,6 @@ package br.com.classapp.RNSensitiveInfo;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.facebook.react.bridge.Promise;
@@ -83,7 +82,6 @@ public class RNSensitiveInfoModule extends ReactContextBaseJavaModule {
         return getReactApplicationContext().getSharedPreferences(name, Context.MODE_PRIVATE);
     }
 
-    @NonNull
     private String sharedPreferences(ReadableMap options) {
         String name = options.hasKey("sharedPreferencesName") ? options.getString("sharedPreferencesName") : "shared_preferences";
         if (name == null) {
